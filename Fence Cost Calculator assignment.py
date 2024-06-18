@@ -5,10 +5,10 @@
 # Greet user to the Fence Cost Calculator 
 print("Welcome to the Fence Cost Calculator") 
 
-# Ask user for all measurements. 
+# Ask user for all required measurements. 
 print("What are the desired measurements? ") 
 
-# Ask user for the measurements, inputs need to be >0 
+# Ask user for the measurements, inputs need to be >0.
 error = "Chosen number is not above zero, please enter a new number\n" 
 while True: 
 
@@ -16,7 +16,7 @@ while True:
         width = float(input("Width: ")) 
         length = float(input("Length: ")) 
         cost_per_meter = float(input("Cost per meter: "))  
-
+# Make sure the inputs are above 0.
         if width > 0: 
             done = True 
         if length > 0: 
@@ -28,9 +28,10 @@ while True:
 
     except ValueError: 
         print(error) 
-    perimeter = (width + length * 2)
+    # Complete the calculations.
+    perimeter = ((width + length) * 2)
     total = (cost_per_meter * perimeter) 
-    
+    # Display the results
     print(f"Perimeter is {perimeter} ")
     print(f"Total cost is {total} ") 
 
